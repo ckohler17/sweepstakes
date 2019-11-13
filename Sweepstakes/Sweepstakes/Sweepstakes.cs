@@ -19,15 +19,22 @@ namespace Sweepstakes
 
 
         void RegisterContestant(Contestant contestant)
-        {            
-                contestants.Add(contestant.registrationNum, contestant);
-            
+        {
+            contestant.registrationNum = contestants.Count;    
+            contestants.Add(contestant.registrationNum, contestant);            
         }
-        ContestantPickWinner();
+        public Contestant ContestantPickWinner()
+        {
+            Random random = new Random();
+            int winningNumber = random.Next(0, contestants.Count+1);
+            Contestant winningContestant = contestants[winningNumber];
+            return winningContestant;
+
+        }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine(contestant.firstName + "," + contestant.lastName + "," + contestant.email + "," + contestant.registrationNum); );
         }
     }
 }

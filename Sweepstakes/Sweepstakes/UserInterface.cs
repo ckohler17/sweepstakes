@@ -31,10 +31,6 @@ namespace Sweepstakes
             email = Console.ReadLine();
             return email;
         }
-        public static int GetRegistrationNumber()
-        {
-            registrationNum += 1;
-            return registrationNum;
-        }
+
     }
 }
