@@ -31,6 +31,17 @@ namespace Sweepstakes
             email = Console.ReadLine();
             return email;
         }
-
+        public static string GetStackOrQueue()
+        {
+            Console.WriteLine("Do you want to use 'stack' or 'queue'");
+            string input = Console.ReadLine();
+            return input;
+        }
+        public static string SweepstakesName()
+        {
+            Console.WriteLine("What is the name of your sweepstakes.");
+            string answer = Console.ReadLine();
+            return answer;
+        }
     }
 }

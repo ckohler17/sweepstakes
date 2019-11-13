@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         public string name;
         public Dictionary<int, Contestant> contestants;
@@ -18,7 +18,7 @@ namespace Sweepstakes
         }
 
 
-        void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestant)
         {
             contestant.registrationNum = contestants.Count;    
             contestants.Add(contestant.registrationNum, contestant);            

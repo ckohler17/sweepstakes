@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant
+    public class Contestant
     {
         public string firstName;
         public string lastName;
@@ -22,8 +22,7 @@ namespace Sweepstakes
         {
             firstName = UserInterface.GetFirstName();
             lastName = UserInterface.GetLastName();
-            email = UserInterface.GetEmail();
-            registrationNum = UserInterface.GetRegistrationNumber();
+            email = UserInterface.GetEmail();            
         }
 
 
