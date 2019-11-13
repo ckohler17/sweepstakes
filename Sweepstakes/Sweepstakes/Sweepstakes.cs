@@ -11,10 +11,10 @@ namespace Sweepstakes
         public string name;
         public Dictionary<int, Contestant> contestants;
         
-        public Sweepstakes(string name)
+        public Sweepstakes(string namePass)
         {
-            this.name = name;
-            Dictionary < int, Contestant> contestants = new Dictionary<int, Contestant>();
+            name = namePass;
+            contestants = new Dictionary<int, Contestant>();
         }
 
 

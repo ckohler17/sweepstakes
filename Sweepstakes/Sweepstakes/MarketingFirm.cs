@@ -13,25 +13,11 @@ namespace Sweepstakes
         {
             this.manager = manager;
         }
-        public void CreateSweepstakes(Contestant contestant, Sweepstakes sweepstakes)
+        public void CreateSweepstakes()
         {
-            manager.GetSweepstakes();
+            Sweepstakes sweepstakes = new Sweepstakes(UserInterface.SweepstakesName());
             manager.InsertSweepstakes(sweepstakes);
-            contestant.GetContestantInfo();
-            sweepstakes.RegisterContestant(contestant);
-            sweepstakes.ContestantPickWinner();
-            sweepstakes.PrintContestantInfo(contestant);
-        }
-        public void UseStackOrQueue()
-        {
-            string answer = UserInterface.GetStackOrQueue();
-            if(answer == "stack")
-            {
-                manager = new SweepstakesStackManager();
-            } else if( answer == "queue")
-            {
-                manager = new SweepstakesQueueManager();
-            }
+
         }
 
 

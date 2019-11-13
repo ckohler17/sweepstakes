@@ -10,6 +10,16 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
+            MarketingFirm marketingFirm;
+            string answer = UserInterface.GetStackOrQueue();
+            if (answer == "stack")
+            {
+                marketingFirm = new MarketingFirm(new SweepstakesStackManager());
+            }
+            else if (answer == "queue")
+            {
+                marketingFirm = new MarketingFirm(new SweepstakesQueueManager());
+            }
         }
     }
 }
