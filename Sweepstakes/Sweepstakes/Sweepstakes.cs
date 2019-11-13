@@ -9,20 +9,19 @@ namespace Sweepstakes
     class Sweepstakes
     {
         public string name;
-        public Dictionary<string, string> contestants;
+        public Dictionary<int, Contestant> contestants;
         
         public Sweepstakes(string name)
         {
             this.name = name;
-            Dictionary < string, string> contestants = new Dictionary<string, string>;
+            Dictionary < int, Contestant> contestants = new Dictionary<int, Contestant>();
         }
 
 
         void RegisterContestant(Contestant contestant)
-        {
-            for (int i = 0; i < contestant. i++) {
-                contestants.Add(i, contestant[i]);
-            }
+        {            
+                contestants.Add(contestant.registrationNum, contestant);
+            
         }
         ContestantPickWinner();
 

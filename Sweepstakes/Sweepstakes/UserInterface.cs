@@ -11,7 +11,7 @@ namespace Sweepstakes
         private static string firstName;
         private static string lastName;
         private static string email;
-        private static string registrationNum;
+        private static int registrationNum;
 
         public static string GetFirstName()
         {
@@ -31,7 +31,7 @@ namespace Sweepstakes
             email = Console.ReadLine();
             return email;
         }
-        public static string GetRegistrationNumber()
+        public static int GetRegistrationNumber()
         {
             registrationNum += 1;
             return registrationNum;
